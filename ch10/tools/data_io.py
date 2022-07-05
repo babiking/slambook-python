@@ -34,7 +34,7 @@ def read_custombudle_from_txt():
         i = n_obs + 1
         cam_se3_params = np.array(
             [float(eval(x.strip())) for x in lines[i:i + 9 * n_cams]],
-            dtype=np.float64).reshape([-1, 9])[:, :6]
+            dtype=np.float64).reshape([-1, 9])
 
         # 3. read 3D point coordinates
         i = n_obs + 1 + 9 * n_cams
